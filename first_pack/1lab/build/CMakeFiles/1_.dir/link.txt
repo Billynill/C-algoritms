@@ -1,1 +1,0 @@
-/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/1_.dir/src/logic.c.o CMakeFiles/1_.dir/src/main.c.o CMakeFiles/1_.dir/tests/test.c.o -o 1_

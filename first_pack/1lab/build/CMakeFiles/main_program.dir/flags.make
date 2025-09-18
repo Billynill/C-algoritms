@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I"/Users/rustam/Desktop/Ф.У.(лаборотные)/1 лаба/src"
+C_INCLUDES = -I"/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/src"
 
 C_FLAGSarm64 = -std=gnu11 -arch arm64
 

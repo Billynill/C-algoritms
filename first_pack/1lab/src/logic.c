@@ -1,85 +1,114 @@
-//
-// Created by Рустам on 9/16/25.
-//
-
 #include "logic.h"
 #include <math.h>
 #include <stdbool.h>
 #include <stdio.h>
 #include <string.h>
 
-int find_multiples(int x, int results[]) {
-    int count = 0;
-
+StatusCode find_multiples(const int x, int results[], int* count) {
     if (x <= 0 || x > 100) {
-        return 0;
+        return ERROR_INVALID_INPUT;
+    }
+    if (results == NULL || count == NULL) {
+        return ERROR_INVALID_INPUT;
     }
 
+    *count = 0;
     for (int i = x; i <= 100; i += x) {
-        if (i % x == 0) {
-            results[count] = i;
-            count++;
-        }
+        results[*count] = i;
+        (*count)++;
     }
 
-    return count;
-}
-
-long calculate_sum(int x) {
-    if (x<= 0) {
-        return 0;
+    if (*count == 0) {
+        return ERROR_NO_MULTIPLES;
     }
 
-    return (long)x * (x + 1) / 2;
+    return SUCCESS;
 }
 
-long long calculate_factorial(int x) {
+StatusCode calculate_sum(const int x, long* result) {
+    if (x <= 0) {
+        return ERROR_INVALID_INPUT;
+    }
+    if (result == NULL) {
+        return ERROR_INVALID_INPUT;
+    }
+
+    *result = (long)x * (x + 1) / 2;
+    return SUCCESS;
+}
+
+StatusCode calculate_factorial(const int x, long long* result) {
     if (x < 0) {
-        return -1;
+        return ERROR_NEGATIVE_NUMBER;
     }
-    if (x == 0|| x == 1) {
-        return 1;
+    if (result == NULL) {
+        return ERROR_INVALID_INPUT;
     }
-    long long result = 1;
+
+    if (x == 0 || x == 1) {
+        *result = 1;
+        return SUCCESS;
+    }
+
+    *result = 1;
     for (int i = 2; i <= x; i++) {
-        result *= i;
+        if (*result > LLONG_MAX / i) {
+            return ERROR_OVERFLOW;
+        }
+        *result *= i;
     }
-    return result;
+
+    return SUCCESS;
 }
 
-bool is_prime(int x) {
+StatusCode is_prime(const int x, bool* result) {
     if (x <= 1) {
-        return false;
+        *result = false;
+        return SUCCESS;
     }
+    if (result == NULL) {
+        return ERROR_INVALID_INPUT;
+    }
+
     if (x == 2) {
-        return true;
+        *result = true;
+        return SUCCESS;
     }
     if (x % 2 == 0) {
-        return false;
+        *result = false;
+        return SUCCESS;
     }
 
     int limit = sqrt(x);
     for (int i = 3; i <= limit; i += 2) {
         if (x % i == 0) {
-            return false;
+            *result = false;
+            return SUCCESS;
         }
     }
-    return true;
+
+    *result = true;
+    return SUCCESS;
 }
 
-int split_hex_digit(int x, char* result) {
+StatusCode split_hex_digits(const int x, char* result, int* length) {
     if (x < 0) {
-        return -1;
+        return ERROR_NEGATIVE_NUMBER;
+    }
+    if (result == NULL || length == NULL) {
+        return ERROR_INVALID_INPUT;
     }
 
     if (x == 0) {
         result[0] = '0';
         result[1] = '\0';
-        return 1;
+        *length = 1;
+        return SUCCESS;
     }
 
     char hex_string[20];
     sprintf(hex_string, "%X", x);
+
     int j = 0;
     for (int i = 0; hex_string[i] != '\0'; i++) {
         result[j++] = hex_string[i];
@@ -88,34 +117,33 @@ int split_hex_digit(int x, char* result) {
         }
     }
     result[j] = '\0';
-    return j;
+    *length = j;
+
+    return SUCCESS;
 }
 
-void print_power_table(int x) {
+StatusCode calculate_power_table(const int x, long long table[10][10]) {
     if (x <= 0 || x > 10) {
-        return;
+        return ERROR_INVALID_INPUT;
     }
-    printf("Основание |");
-    for (int power = 1; power <= x; power++) {
-        printf("Степень %d |", power);
+    if (table == NULL) {
+        return ERROR_INVALID_INPUT;
     }
-    printf("\n");
 
-    printf("---------|");
-    for (int power = 1; power <= x; power++) {
-        printf("-----------|");
-    }
-    printf("\n");
-
-    for (int base = 1; base <= 10; base++) {
-        printf("%3d |", base);
-        for (int power = 1; power <= x; power++) {
+    for (int base = 0; base < 10; base++) {
+        for (int power = 0; power < x; power++) {
             long long result = 1;
-            for (int i = 0; i < power; i++) {
-                result *= base;
+            int current_power = power + 1;
+
+            for (int i = 0; i < current_power; i++) {
+                if (result > LLONG_MAX / (base + 1)) {
+                    return ERROR_OVERFLOW;
+                }
+                result *= (base + 1);
             }
-            printf("%11lld |", result);
+            table[base][power] = result;
         }
-        printf("\n");
     }
+
+    return SUCCESS;
 }
