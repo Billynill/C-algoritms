@@ -1,0 +1,2 @@
+nthprime_smoke 1 0.400486
+---

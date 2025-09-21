@@ -1,0 +1,20 @@
+Start testing: Sep 21 12:39 PDT
+----------------------------------------------------------
+1/1 Testing: nthprime_smoke
+1/1 Test: nthprime_smoke
+Command: "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/2lab/build/nthprime_tests"
+Directory: /Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/2lab/build
+"nthprime_smoke" start time: Sep 21 12:39 PDT
+Output:
+----------------------------------------------------------
+=== nth-prime tests ===
+Passed: 33, Failed: 0
+<end of output>
+Test time =   0.40 sec
+----------------------------------------------------------
+Test Passed.
+"nthprime_smoke" end time: Sep 21 12:39 PDT
+"nthprime_smoke" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Sep 21 12:39 PDT

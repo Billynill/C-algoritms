@@ -1,0 +1,2 @@
+/usr/bin/ar qc libprime_utils.a CMakeFiles/prime_utils.dir/src/prime_utils.c.o
+/usr/bin/ranlib libprime_utils.a
