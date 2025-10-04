@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -Wpedantic -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/3lab_tests.dir/tests/tests.c.o CMakeFiles/3lab_tests.dir/src/math_oper.c.o CMakeFiles/3lab_tests.dir/src/validate.c.o -o 3lab_tests  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/libm.tbd
