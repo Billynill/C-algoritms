@@ -14,12 +14,11 @@ StatusCode solve_quadratic(double a, double b, double c, double epsilon, Quadrat
     memset(solution, 0, sizeof(QuadraticSolution));
 
     if (equals_with_epsilon(a, 0, epsilon)) {
-        // Linear equation: bx + c = 0
         if (equals_with_epsilon(b, 0, epsilon)) {
             if (equals_with_epsilon(c, 0, epsilon)) {
-                solution->roots_count = -1; // Infinite solutions (0 = 0)
+                solution->roots_count = -1;
             } else {
-                solution->roots_count = 0; // No solutions (c != 0)
+                solution->roots_count = 0;
             }
         } else {
             solution->x1 = -c / b;
@@ -28,7 +27,6 @@ StatusCode solve_quadratic(double a, double b, double c, double epsilon, Quadrat
         return SUCCESS;
     }
 
-    // Quadratic equation: ax^2 + bx + c = 0
     double discriminant = b * b - 4 * a * c;
 
     if (greater_than_with_epsilon(discriminant, 0, epsilon)) {
@@ -38,11 +36,9 @@ StatusCode solve_quadratic(double a, double b, double c, double epsilon, Quadrat
         solution->x2 = (-b - sqrt_d) / (2 * a);
         solution->roots_count = 2;
     } else if (equals_with_epsilon(discriminant, 0, epsilon)) {
-        // One real root
         solution->x1 = -b / (2 * a);
         solution->roots_count = 1;
     } else {
-        // No real roots
         solution->roots_count = 0;
     }
 

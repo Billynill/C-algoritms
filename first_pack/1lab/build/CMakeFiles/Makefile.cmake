@@ -7,7 +7,7 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/CMakeLists.txt"
+  "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/CMakeLists.txt"
   "CMakeFiles/4.1.1/CMakeCCompiler.cmake"
   "CMakeFiles/4.1.1/CMakeSystem.cmake"
   "/opt/homebrew/share/cmake/Modules/CMakeCCompiler.cmake.in"

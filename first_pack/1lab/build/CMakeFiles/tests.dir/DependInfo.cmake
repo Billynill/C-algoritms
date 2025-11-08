@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c" "CMakeFiles/tests.dir/src/logic.c.o" "gcc" "CMakeFiles/tests.dir/src/logic.c.o.d"
-  "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c" "CMakeFiles/tests.dir/tests/test.c.o" "gcc" "CMakeFiles/tests.dir/tests/test.c.o.d"
+  "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c" "CMakeFiles/tests.dir/src/logic.c.o" "gcc" "CMakeFiles/tests.dir/src/logic.c.o.d"
+  "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c" "CMakeFiles/tests.dir/tests/test.c.o" "gcc" "CMakeFiles/tests.dir/tests/test.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab"
+CMAKE_SOURCE_DIR = "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build"
+CMAKE_BINARY_DIR = "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tests.dir/depend.make
@@ -73,32 +73,32 @@ CMakeFiles/tests.dir/codegen:
 .PHONY : CMakeFiles/tests.dir/codegen
 
 CMakeFiles/tests.dir/tests/test.c.o: CMakeFiles/tests.dir/flags.make
-CMakeFiles/tests.dir/tests/test.c.o: /Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c
+CMakeFiles/tests.dir/tests/test.c.o: /Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c
 CMakeFiles/tests.dir/tests/test.c.o: CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/tests.dir/tests/test.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tests.dir/tests/test.c.o -MF CMakeFiles/tests.dir/tests/test.c.o.d -o CMakeFiles/tests.dir/tests/test.c.o -c "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/tests.dir/tests/test.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tests.dir/tests/test.c.o -MF CMakeFiles/tests.dir/tests/test.c.o.d -o CMakeFiles/tests.dir/tests/test.c.o -c "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c"
 
 CMakeFiles/tests.dir/tests/test.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tests.dir/tests/test.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c" > CMakeFiles/tests.dir/tests/test.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c" > CMakeFiles/tests.dir/tests/test.c.i
 
 CMakeFiles/tests.dir/tests/test.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tests.dir/tests/test.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c" -o CMakeFiles/tests.dir/tests/test.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/tests/test.c" -o CMakeFiles/tests.dir/tests/test.c.s
 
 CMakeFiles/tests.dir/src/logic.c.o: CMakeFiles/tests.dir/flags.make
-CMakeFiles/tests.dir/src/logic.c.o: /Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c
+CMakeFiles/tests.dir/src/logic.c.o: /Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c
 CMakeFiles/tests.dir/src/logic.c.o: CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/tests.dir/src/logic.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tests.dir/src/logic.c.o -MF CMakeFiles/tests.dir/src/logic.c.o.d -o CMakeFiles/tests.dir/src/logic.c.o -c "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/tests.dir/src/logic.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/tests.dir/src/logic.c.o -MF CMakeFiles/tests.dir/src/logic.c.o.d -o CMakeFiles/tests.dir/src/logic.c.o -c "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c"
 
 CMakeFiles/tests.dir/src/logic.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/tests.dir/src/logic.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c" > CMakeFiles/tests.dir/src/logic.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c" > CMakeFiles/tests.dir/src/logic.c.i
 
 CMakeFiles/tests.dir/src/logic.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/tests.dir/src/logic.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c" -o CMakeFiles/tests.dir/src/logic.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c" -o CMakeFiles/tests.dir/src/logic.c.s
 
 # Object files for target tests
 tests_OBJECTS = \
@@ -112,7 +112,7 @@ tests: CMakeFiles/tests.dir/tests/test.c.o
 tests: CMakeFiles/tests.dir/src/logic.c.o
 tests: CMakeFiles/tests.dir/build.make
 tests: CMakeFiles/tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,6 +124,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab" "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab" "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build" "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build" "/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/tests.dir/DependInfo.cmake" "--color=$(COLOR)"
+	cd "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab" "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab" "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build" "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build" "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/tests.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/tests.dir/depend
 

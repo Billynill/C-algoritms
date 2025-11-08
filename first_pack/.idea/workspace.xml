@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="12ee01f8-dd06-42e6-bd06-d4cc4dde21f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/4lab/constants.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4lab/constants.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4lab/main.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/4lab/tests.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/4.1.1/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/4.1.1/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/4.1.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/4.1.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/4.1.1/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/4.1.1/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/4.1.1/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/4.1.1/CompilerIdC/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/InstallScripts.json" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/InstallScripts.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/src/logic.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/src/logic.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/src/logic.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/src/logic.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/src/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/src/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/src/main.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/main_program.dir/src/main.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/compiler_depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/compiler_depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/src/logic.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/src/logic.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/src/logic.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/src/logic.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/tests/test.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/tests/test.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/tests/test.c.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/CMakeFiles/tests.dir/tests/test.c.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/main_program" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/main_program" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1lab/build/tests" beforeDir="false" afterPath="$PROJECT_DIR$/1lab/build/tests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2lab/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2lab/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2lab/build/CMakeFiles/nthprime.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2lab/build/CMakeFiles/nthprime.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/2lab/build/CMakeFiles/nthprime.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2lab/build/CMakeFiles/nthprime_tests.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2lab/build/CMakeFiles/nthprime_tests.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/2lab/build/CMakeFiles/nthprime_tests.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2lab/build/CMakeFiles/prime_utils.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2lab/build/CMakeFiles/prime_utils.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/2lab/build/CMakeFiles/prime_utils.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2lab/build/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2lab/build/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/build/3lab" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/build/3lab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/build/3lab_tests" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/build/3lab_tests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab.dir/src/main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab.dir/src/main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab.dir/src/math_oper.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab.dir/src/math_oper.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab_tests.dir/src/math_oper.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab_tests.dir/src/math_oper.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab_tests.dir/src/validate.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/build/CMakeFiles/3lab_tests.dir/src/validate.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/src/math_oper.c" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/src/math_oper.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3lab/src/validate.c" beforeDir="false" afterPath="$PROJECT_DIR$/3lab/src/validate.c" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="33sQYtdK4e24jErvtImiZNJjynZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12ee01f8-dd06-42e6-bd06-d4cc4dde21f1" name="Changes" comment="" />
+      <created>1760103350902</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760103350902</updated>
+      <workItem from="1760103351988" duration="112000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

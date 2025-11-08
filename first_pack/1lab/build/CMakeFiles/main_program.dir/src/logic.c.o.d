@@ -1,6 +1,6 @@
 CMakeFiles/main_program.dir/src/logic.c.o: \
-  /Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c \
-  /Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/src/logic.h \
+  /Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/src/logic.c \
+  /Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/src/logic.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdbool.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/limits.h \

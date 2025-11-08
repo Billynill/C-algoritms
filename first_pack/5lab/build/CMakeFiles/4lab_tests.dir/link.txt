@@ -1,0 +1,1 @@
+/usr/bin/cc  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/4lab_tests.dir/src/file_proc.c.o CMakeFiles/4lab_tests.dir/src/utils.c.o -o 4lab_tests

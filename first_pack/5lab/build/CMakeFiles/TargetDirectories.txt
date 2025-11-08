@@ -1,0 +1,4 @@
+/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build/CMakeFiles/4lab.dir
+/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build/CMakeFiles/4lab_tests.dir
+/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build/CMakeFiles/edit_cache.dir
+/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build/CMakeFiles/rebuild_cache.dir

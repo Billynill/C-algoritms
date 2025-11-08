@@ -1,4 +1,4 @@
-/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/main_program.dir
-/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/tests.dir
-/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/edit_cache.dir
-/Users/rustam/Desktop/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/rebuild_cache.dir
+/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/main_program.dir
+/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/tests.dir
+/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/edit_cache.dir
+/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/1lab/build/CMakeFiles/rebuild_cache.dir

@@ -19,7 +19,7 @@ typedef enum {
 typedef struct {
     double x1;
     double x2;
-    int roots_count; // -1 for infinite solutions, 0 for no solutions, 1 for one root, 2 for two roots
+    int roots_count; 
 } QuadraticSolution;
 
 StatusCode solve_quadratic_permutations(double epsilon, double a, double b, double c);

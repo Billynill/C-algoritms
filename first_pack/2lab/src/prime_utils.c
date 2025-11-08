@@ -60,4 +60,5 @@ PrimeStatusCode find_nth_prime(int n, long long* result) {
     if (answer < 0) return PRIME_ERROR_INTERNAL;
     *result = answer;
     return PRIME_SUCCESS;
+    
 }

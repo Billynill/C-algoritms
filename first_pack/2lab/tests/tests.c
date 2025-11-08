@@ -2,9 +2,6 @@
 // Created by Рустам on 9/17/25.
 //
 
-// tests/tests.c
-// Простые модульные тесты для prime_utils
-// Сборка: вместе с библиотекой prime_utils (см. CMakeLists.txt)
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -143,4 +140,5 @@ int main(void) {
 
     printf("Passed: %d, Failed: %d\n", g_passed, g_failed);
     return g_failed == 0 ? 0 : 1;
+    
 }
