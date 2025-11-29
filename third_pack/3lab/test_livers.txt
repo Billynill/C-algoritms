@@ -1,0 +1,3 @@
+1 Smith John Michael 15.06.1980 M 2500.50
+2 Johnson Alice Marie 20.09.1975 W 3000.75
+3 Brown Robert James 10.03.1990 M 2000.25

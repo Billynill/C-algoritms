@@ -1,0 +1,9 @@
+=== НАЧАЛО ТРАССИРОВКИ ===
+[1] A = 2 | A=2 | Assignment
+[2] B = 3 | A=2, B=3 | Assignment
+[3] C = A + B * 2 | A=2, B=3, C=8 | Assignment
+[4] D = C ^ B | A=2, B=3, C=8, D=512 | Assignment
+[5] print(D) | A=2, B=3, C=8, D=512 | Print
+[6] E = -5 + A * 3 | A=2, B=3, C=8, D=512, E=1 | Assignment
+[7] print(E) | A=2, B=3, C=8, D=512, E=1 | Print
+=== КОНЕЦ ТРАССИРОВКИ ===

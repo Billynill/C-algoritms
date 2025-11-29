@@ -1,0 +1,6 @@
+=== НАЧАЛО ТРАССИРОВКИ ===
+[1] A = 7 | A=7 | Assignment
+[2] B = A + 10 * 3 | A=7, B=37 | Assignment
+[3] C = B - A | A=7, B=37, C=30 | Assignment
+[4] print(C) | A=7, B=37, C=30 | Print
+=== КОНЕЦ ТРАССИРОВКИ ===
