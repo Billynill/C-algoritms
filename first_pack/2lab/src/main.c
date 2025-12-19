@@ -1,63 +1,68 @@
-//
-// Created by Рустам on 9/17/25.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "prime_utils.h"
 
-static int read_int(int *out) {
-    if (scanf("%d", out) != 1) return 0;
-    return 1;
-}
-
-int main() {
+int main(void) {
+    
+    // ВВОД: количество запросов
+    printf("Введите количество запросов T: ");
     int T;
-    if (!read_int(&T) || T <= 0) {
-        fprintf(stderr, "Ошибка ввода: T должно быть положительным целым числом.\n");
+    if (scanf("%d", &T) != 1 || T <= 0) {
+        printf("ОШИБКА: T должно быть положительным целым числом!\n");
         return 1;
     }
-
-    int *queries = (int*)malloc((size_t)T * sizeof(int));
+    
+    // ВВОД: номера простых чисел
+    printf("\nВведите %d номеров простых чисел (по одному в строке):\n", T);
+    
+    int* queries = (int*)malloc(T * sizeof(int));
     if (!queries) {
-        fprintf(stderr, "Ошибка: не удалось выделить память под массив запросов.\n");
+        printf("ОШИБКА: Не удалось выделить память!\n");
         return 1;
     }
-
-    for (int i = 0; i < T; ++i) {
-        if (!read_int(&queries[i])) {
-            fprintf(stderr,"Ошибка ввода: запрос #%d не является целым числом.\n", i + 1);
-            free(queries);
-            return 1;
-        }
-        if (queries[i] <= 0) {
-            fprintf(stderr, "Ошибка ввода: n в запросе #%d должно быть > 0.\n", i + 1);
+    
+    for (int i = 0; i < T; i++) {
+        printf("n%d = ", i + 1);
+        if (scanf("%d", &queries[i]) != 1 || queries[i] <= 0) {
+            printf("ОШИБКА: Номер должен быть положительным целым числом!\n");
             free(queries);
             return 1;
         }
     }
-
-    for (int i = 0; i < T; ++i) {
-        long long prime = 0;
-        PrimeStatusCode st = find_nth_prime(queries[i], &prime);
-        switch (st) {
-            case PRIME_SUCCESS:
-                printf("%lld\n", prime);
-                break;
-            case PRIME_ERROR_INVALID_INPUT:
-                fprintf(stderr,"Ошибка: некорректный запрос n=%d (должно быть n>=1).\n", queries[i]);
-                break;
-            case PRIME_ERROR_MEMORY:
-                fprintf(stderr, "Ошибка: нехватка памяти при вычислении для n=%d.\n", queries[i]);
-                break;
-            case PRIME_ERROR_OVERFLOW:
-                fprintf(stderr, "Ошибка: слишком большое n=%d — верхняя граница не помещается в тип long long.\n", queries[i]);
-                break;
-            default:
-                fprintf(stderr, "Внутренняя ошибка при обработке n=%d.\n", queries[i]);
-                break;
+    
+    // ВЫВОД: результаты
+    printf("\n=== РЕЗУЛЬТАТЫ ===\n");
+    
+    for (int i = 0; i < T; i++) {
+        long long prime;
+        PrimeStatusCode status = find_nth_prime(queries[i], &prime);
+        
+        if (status == PRIME_SUCCESS) {
+            printf("%d-е простое число = %lld\n", queries[i], prime);
+        } else {
+            printf("ОШИБКА для n=%d: ", queries[i]);
+            
+            switch (status) {
+                case PRIME_ERROR_INVALID_INPUT:
+                    printf("некорректный номер\n");
+                    break;
+                case PRIME_ERROR_MEMORY:
+                    printf("не хватает памяти\n");
+                    break;
+                case PRIME_ERROR_OVERFLOW:
+                    printf("слишком большой номер\n");
+                    break;
+                case PRIME_ERROR_INTERNAL:
+                    printf("внутренняя ошибка алгоритма\n");
+                    break;
+                default:
+                    printf("неизвестная ошибка\n");
+            }
         }
     }
+    
+    printf("\n=== ВСЕГО ОБРАБОТАНО ЗАПРОСОВ: %d ===\n", T);
+    
     free(queries);
     return 0;
 }

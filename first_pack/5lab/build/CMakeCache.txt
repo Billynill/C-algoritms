@@ -23,6 +23,15 @@
 //Value Computed by CMake
 4lab_SOURCE_DIR:STATIC=/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab
 
+//Value Computed by CMake
+5lab_BINARY_DIR:STATIC=/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build
+
+//Value Computed by CMake
+5lab_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+5lab_SOURCE_DIR:STATIC=/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
@@ -140,7 +149,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=4lab
+CMAKE_PROJECT_NAME:STATIC=5lab
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION:STATIC=

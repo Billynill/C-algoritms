@@ -90,6 +90,5 @@ CMakeFiles/4lab.dir/src/main.c.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_strings.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/secure/_string.h \
-  /Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/src/file_proc.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/17/include/stdbool.h \
-  /Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/src/utils.h
+  /Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/src/file_proc.h

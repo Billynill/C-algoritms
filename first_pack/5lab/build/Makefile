@@ -129,26 +129,12 @@ depend:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab.dir/build.make CMakeFiles/4lab.dir/build
 .PHONY : 4lab/fast
 
-#=============================================================================
-# Target rules for targets named 4lab_tests
-
-# Build rule for target.
-4lab_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 4lab_tests
-.PHONY : 4lab_tests
-
-# fast build rule for target.
-4lab_tests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/build
-.PHONY : 4lab_tests/fast
-
 src/file_proc.o: src/file_proc.c.o
 .PHONY : src/file_proc.o
 
 # target to build an object file
 src/file_proc.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab.dir/build.make CMakeFiles/4lab.dir/src/file_proc.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/src/file_proc.c.o
 .PHONY : src/file_proc.c.o
 
 src/file_proc.i: src/file_proc.c.i
@@ -157,7 +143,6 @@ src/file_proc.i: src/file_proc.c.i
 # target to preprocess a source file
 src/file_proc.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab.dir/build.make CMakeFiles/4lab.dir/src/file_proc.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/src/file_proc.c.i
 .PHONY : src/file_proc.c.i
 
 src/file_proc.s: src/file_proc.c.s
@@ -166,7 +151,6 @@ src/file_proc.s: src/file_proc.c.s
 # target to generate assembly for a file
 src/file_proc.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab.dir/build.make CMakeFiles/4lab.dir/src/file_proc.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/src/file_proc.c.s
 .PHONY : src/file_proc.c.s
 
 src/main.o: src/main.c.o
@@ -199,7 +183,6 @@ src/utils.o: src/utils.c.o
 # target to build an object file
 src/utils.c.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab.dir/build.make CMakeFiles/4lab.dir/src/utils.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/src/utils.c.o
 .PHONY : src/utils.c.o
 
 src/utils.i: src/utils.c.i
@@ -208,7 +191,6 @@ src/utils.i: src/utils.c.i
 # target to preprocess a source file
 src/utils.c.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab.dir/build.make CMakeFiles/4lab.dir/src/utils.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/src/utils.c.i
 .PHONY : src/utils.c.i
 
 src/utils.s: src/utils.c.s
@@ -217,7 +199,6 @@ src/utils.s: src/utils.c.s
 # target to generate assembly for a file
 src/utils.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab.dir/build.make CMakeFiles/4lab.dir/src/utils.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/src/utils.c.s
 .PHONY : src/utils.c.s
 
 # Help Target
@@ -229,7 +210,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... 4lab"
-	@echo "... 4lab_tests"
 	@echo "... src/file_proc.o"
 	@echo "... src/file_proc.i"
 	@echo "... src/file_proc.s"

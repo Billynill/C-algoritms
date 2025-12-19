@@ -1,30 +1,39 @@
 #include "utils.h"
-#include <string.h>
-#include <stdlib.h>
+#include <ctype.h>
 
+// Проверяем является ли символ латинской буквой (A-Z, a-z)
 bool is_latin_letter(char c) {
     return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z');
 }
 
+// Проверяем является ли символ арабской цифрой (0-9)
 bool is_arabic_digit(char c) {
     return c >= '0' && c <= '9';
 }
 
-bool is_special_char(char c) {
-    return !is_latin_letter(c) && !is_arabic_digit(c) && c != ' ' && c != '\n' && c != '\r' && c != '\t';
+// Проверяем является ли символ пробельным (пробел, таб, перенос строки)
+bool is_whitespace(char c) {
+    return c == ' ' || c == '\n' || c == '\r' || c == '\t';
 }
 
-char* generate_output_filename(const char* input_filename) {
-    if (input_filename == NULL) return NULL;
-    
-    const char* prefix = "out_";
-    size_t len = strlen(prefix) + strlen(input_filename) + 1;
-    char* result = malloc(len);
-    
-    if (result != NULL) {
-        strcpy(result, prefix);
-        strcat(result, input_filename);
+// Проверяем является ли символ специальным
+// Специальный = не буква, не цифра, не пробел
+bool is_special_char(char c) {
+    // Если это пробельный символ - не специальный
+    if (is_whitespace(c)) {
+        return false;
     }
     
-    return result;
+    // Если это буква - не специальный
+    if (is_latin_letter(c)) {
+        return false;
+    }
+    
+    // Если это цифра - не специальный
+    if (is_arabic_digit(c)) {
+        return false;
+    }
+    
+    // Всё остальное - специальный символ
+    return true;
 }

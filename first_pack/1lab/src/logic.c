@@ -62,24 +62,31 @@ StatusCode calculate_factorial(const int x, long long* result) {
 }
 
 StatusCode is_prime(const int x, bool* result) {
-    if (x <= 1) {
+    if (result == NULL) {
+        return ERROR_INVALID_INPUT;
+    }
+    
+    if (x < 0) {
         *result = false;
         return SUCCESS;
     }
-    if (result == NULL) {
-        return ERROR_INVALID_INPUT;
+    
+    if (x <= 1) {
+        *result = false;
+        return SUCCESS;
     }
 
     if (x == 2) {
         *result = true;
         return SUCCESS;
     }
+
     if (x % 2 == 0) {
         *result = false;
         return SUCCESS;
     }
 
-    int limit = sqrt(x);
+    int limit = (int)sqrt((double)x);
     for (int i = 3; i <= limit; i += 2) {
         if (x % i == 0) {
             *result = false;

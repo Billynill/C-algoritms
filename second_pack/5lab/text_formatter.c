@@ -5,10 +5,10 @@
 
 // Проверка, является ли символ частью слова
 bool is_word_character(char c) {
-    return isalnum(c) || c == '_' || c == '-' || c == '\''; // Читаемые символы для слов
+    return isalnum(c) || c == '_' || c == '-' || c == '\'';
 }
 
-// Найти конец слова (позиция после последнего символа слова)
+// Найти конец слова
 int find_word_end(const char *text, int start) {
     int pos = start;
     while (text[pos] && is_word_character(text[pos])) {
@@ -17,13 +17,72 @@ int find_word_end(const char *text, int start) {
     return pos;
 }
 
-// Найти начало следующего слова
-int find_word_start(const char *text, int start) {
-    int pos = start;
-    while (text[pos] && !is_word_character(text[pos])) {
-        pos++;
+// НОВАЯ ФУНКЦИЯ: Растянуть строку пробелами до заданной длины
+static void justify_line(char *line, int target_length) {
+    int current_len = strlen(line);
+    if (current_len >= target_length) return;
+    
+    // Считаем пробелы и слова
+    int space_positions[100]; // позиции пробелов
+    int space_count = 0;
+    int word_count = 0;
+    
+    // Находим все пробелы
+    for (int i = 0; i < current_len; i++) {
+        if (isspace(line[i])) {
+            space_positions[space_count++] = i;
+        } else if (i == 0 || isspace(line[i-1])) {
+            word_count++;
+        }
     }
-    return pos;
+    
+    if (word_count <= 1 || space_count == 0) {
+        // Нельзя распределить пробелы - просто добавляем в конец
+        while (current_len < target_length) {
+            line[current_len++] = ' ';
+        }
+        line[current_len] = '\0';
+        return;
+    }
+    
+    // Сколько пробелов нужно добавить
+    int spaces_to_add = target_length - current_len;
+    int spaces_per_gap = spaces_to_add / space_count;
+    int extra_spaces = spaces_to_add % space_count;
+    
+    // Создаем новую строку
+    char new_line[target_length + 1];
+    int new_pos = 0;
+    int old_pos = 0;
+    
+    for (int i = 0; i < space_count; i++) {
+        // Копируем текст до пробела
+        int chars_to_copy = space_positions[i] - old_pos;
+        strncpy(new_line + new_pos, line + old_pos, chars_to_copy);
+        new_pos += chars_to_copy;
+        old_pos = space_positions[i];
+        
+        // Добавляем оригинальный пробел + дополнительные
+        new_line[new_pos++] = ' '; // оригинальный пробел
+        for (int j = 0; j < spaces_per_gap; j++) {
+            new_line[new_pos++] = ' ';
+        }
+        if (i < extra_spaces) {
+            new_line[new_pos++] = ' ';
+        }
+        
+        old_pos++; // пропускаем оригинальный пробел
+    }
+    
+    // Копируем остаток строки
+    int remaining = current_len - old_pos;
+    if (remaining > 0) {
+        strncpy(new_line + new_pos, line + old_pos, remaining);
+        new_pos += remaining;
+    }
+    
+    new_line[new_pos] = '\0';
+    strcpy(line, new_line);
 }
 
 // Разбить строку на строки по 80 символов с переносом слов
@@ -40,106 +99,57 @@ int split_line(char *line, FILE *output) {
         
         if (current_pos >= len) break;
         
-        // Находим, сколько символов можем взять в текущую строку
+        // Определяем конец текущей строки (максимум 80 символов)
         int line_end = current_pos + MAX_LINE_LENGTH;
         if (line_end > len) {
             line_end = len;
         } else {
-            // Ищем место для разрыва по границе слова
+            // Проверяем, не разрезаем ли мы слово
             if (line_end < len && is_word_character(line[line_end])) {
-                // Находим начало текущего слова
+                // Ищем начало слова, которое разрезали
                 int word_start = line_end;
                 while (word_start > current_pos && is_word_character(line[word_start - 1])) {
                     word_start--;
                 }
                 
-                // Если слово начинается не с начала строки, переносим на следующую строку
+                // Если слово начинается не в начале строки, переносим его целиком
                 if (word_start > current_pos) {
                     line_end = word_start;
                 }
             }
         }
         
-        // Записываем строку в выходной файл
+        // Извлекаем подстроку
         if (current_pos < line_end) {
-            // Убеждаемся, что первый символ - читаемый
-            while (current_pos < line_end && isspace(line[current_pos])) {
-                current_pos++;
+            char output_line[MAX_LINE_LENGTH + 1] = {0};
+            strncpy(output_line, line + current_pos, line_end - current_pos);
+            output_line[line_end - current_pos] = '\0';
+            
+            // Удаляем начальные пробелы (первый символ должен быть читаемым)
+            int start = 0;
+            while (output_line[start] && isspace(output_line[start])) {
+                start++;
             }
             
-            if (current_pos < line_end) {
-                // Копируем подстроку
-                char output_line[MAX_LINE_LENGTH + 2] = {0}; // +2 для \n и \0
-                strncpy(output_line, line + current_pos, line_end - current_pos);
-                
-                // Добавляем равномерно пробелы между словами
-                if (line_end - current_pos < MAX_LINE_LENGTH && line_end < len) {
-                    // Считаем пробелы и слова
-                    int space_count = 0;
-                    int word_count = 0;
-                    int temp_pos = current_pos;
-                    
-                    while (temp_pos < line_end) {
-                        if (isspace(line[temp_pos])) {
-                            space_count++;
-                            temp_pos++;
-                        } else {
-                            word_count++;
-                            temp_pos = find_word_end(line, temp_pos);
-                        }
-                    }
-                    
-                    if (word_count > 1 && space_count > 0) {
-                        // Равномерно распределяем пробелы
-                        int total_spaces_needed = MAX_LINE_LENGTH - (line_end - current_pos - space_count);
-                        int spaces_between_words = total_spaces_needed / (word_count - 1);
-                        int extra_spaces = total_spaces_needed % (word_count - 1);
-                        
-                        // Перестраиваем строку с равномерными пробелами
-                        char formatted_line[MAX_LINE_LENGTH + 1] = {0};
-                        int formatted_pos = 0;
-                        temp_pos = current_pos;
-                        int current_word = 0;
-                        
-                        while (temp_pos < line_end && formatted_pos < MAX_LINE_LENGTH) {
-                            if (isspace(line[temp_pos])) {
-                                temp_pos++;
-                            } else {
-                                // Копируем слово
-                                int word_start = temp_pos;
-                                int word_end = find_word_end(line, word_start);
-                                
-                                for (int i = word_start; i < word_end && formatted_pos < MAX_LINE_LENGTH; i++) {
-                                    formatted_line[formatted_pos++] = line[i];
-                                }
-                                
-                                // Добавляем пробелы после слова (кроме последнего)
-                                if (current_word < word_count - 1) {
-                                    int spaces_to_add = spaces_between_words;
-                                    if (current_word < extra_spaces) {
-                                        spaces_to_add++;
-                                    }
-                                    
-                                    for (int i = 0; i < spaces_to_add && formatted_pos < MAX_LINE_LENGTH; i++) {
-                                        formatted_line[formatted_pos++] = ' ';
-                                    }
-                                }
-                                
-                                temp_pos = word_end;
-                                current_word++;
-                            }
-                        }
-                        
-                        strcpy(output_line, formatted_line);
-                    }
+            if (output_line[start]) {
+                // Сдвигаем строку, если были начальные пробелы
+                if (start > 0) {
+                    memmove(output_line, output_line + start, strlen(output_line + start) + 1);
                 }
                 
-                // Убеждаемся, что строка не заканчивается пробелом
-                int output_len = strlen(output_line);
-                while (output_len > 0 && isspace(output_line[output_len - 1])) {
-                    output_line[output_len - 1] = '\0';
-                    output_len--;
+                // Удаляем конечные пробелы
+                int end = strlen(output_line) - 1;
+                while (end >= 0 && isspace(output_line[end])) {
+                    output_line[end--] = '\0';
                 }
+                
+                // ВАЖНОЕ ИСПРАВЛЕНИЕ: Растягиваем пробелами ТОЛЬКО если нужно
+                int current_length = strlen(output_line);
+                if (current_length < MAX_LINE_LENGTH && line_end < len) {
+                    // Это не последняя строка - растягиваем до 80 символов
+                    justify_line(output_line, MAX_LINE_LENGTH);
+                }
+                // Иначе (последняя строка или строка уже 80 символов) - оставляем как есть
                 
                 fprintf(output, "%s\n", output_line);
                 line_count++;
@@ -167,19 +177,16 @@ bool format_file(const char *input_path, const char *output_path) {
         return false;
     }
     
-    char line[10000]; // Буфер для чтения строк
+    char line[10000];
     int total_lines = 0;
     
     printf("Форматирование файла...\n");
     
     while (fgets(line, sizeof(line), input)) {
-        // Убираем символ новой строки
         line[strcspn(line, "\n")] = '\0';
         
         int lines_written = split_line(line, output);
         total_lines += lines_written;
-        
-        printf("Обработана строка, создано %d строк(и)\n", lines_written);
     }
     
     fclose(input);

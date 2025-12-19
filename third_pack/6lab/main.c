@@ -33,7 +33,6 @@ void interactive_mode(void) {
     while (1) {
         printf("> ");
         
-        // Чтение ввода
         if (fgets(input, sizeof(input), stdin) == NULL) {
             printf("\nЗавершение работы...\n");
             break;

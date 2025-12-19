@@ -16,4 +16,10 @@ typedef enum {
 // Основная функция с переменным числом аргументов
 StatusCode check_finite_representation(int base, double epsilon, int count, ...);
 
+// Вспомогательная функция для работы с массивом
+StatusCode check_finite_representation_array(int base, double epsilon, int count, double *numbers);
+
+// Функция для вывода кода статуса
+void print_status_code(StatusCode status);
+
 #endif

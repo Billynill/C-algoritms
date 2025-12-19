@@ -64,12 +64,10 @@ CMAKE_BINARY_DIR = "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные
 
 # The main recursive "all" target.
 all: CMakeFiles/4lab.dir/all
-all: CMakeFiles/4lab_tests.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/4lab.dir/codegen
-codegen: CMakeFiles/4lab_tests.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -78,7 +76,6 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/4lab.dir/clean
-clean: CMakeFiles/4lab_tests.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -112,38 +109,6 @@ CMakeFiles/4lab.dir/codegen:
 CMakeFiles/4lab.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab.dir/build.make CMakeFiles/4lab.dir/clean
 .PHONY : CMakeFiles/4lab.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/4lab_tests.dir
-
-# All Build rule for target.
-CMakeFiles/4lab_tests.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build/CMakeFiles" --progress-num=5,6,7 "Built target 4lab_tests"
-.PHONY : CMakeFiles/4lab_tests.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/4lab_tests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build/CMakeFiles" 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/4lab_tests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build/CMakeFiles" 0
-.PHONY : CMakeFiles/4lab_tests.dir/rule
-
-# Convenience name for target.
-4lab_tests: CMakeFiles/4lab_tests.dir/rule
-.PHONY : 4lab_tests
-
-# codegen rule for target.
-CMakeFiles/4lab_tests.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/Users/rustam/Desktop/Учеба/Ф.У.(лаборотные)/first_pack/5lab/build/CMakeFiles" --progress-num=5,6,7 "Finished codegen for target 4lab_tests"
-.PHONY : CMakeFiles/4lab_tests.dir/codegen
-
-# clean rule for target.
-CMakeFiles/4lab_tests.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/4lab_tests.dir/build.make CMakeFiles/4lab_tests.dir/clean
-.PHONY : CMakeFiles/4lab_tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

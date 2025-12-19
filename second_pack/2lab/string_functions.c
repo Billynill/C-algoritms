@@ -1,5 +1,7 @@
 #include "string_functions.h"
+#include "error_messages.h"
 
+// Сложность: O(n) - линейный поиск по n байтам
 void *memchr(const void *str, int c, size_t n) {
     if (str == NULL) return NULL;
     
@@ -12,6 +14,7 @@ void *memchr(const void *str, int c, size_t n) {
     return NULL;
 }
 
+// Сложность: O(n) - сравнение n байтов
 int memcmp(const void *str1, const void *str2, size_t n) {
     if (str1 == NULL || str2 == NULL) return 0;
     
@@ -26,6 +29,7 @@ int memcmp(const void *str1, const void *str2, size_t n) {
     return 0;
 }
 
+// Сложность: O(n) - копирование n байтов
 void *memcpy(void *dest, const void *src, size_t n) {
     if (dest == NULL || src == NULL) return dest;
     
@@ -38,6 +42,7 @@ void *memcpy(void *dest, const void *src, size_t n) {
     return dest;
 }
 
+// Сложность: O(n) - заполнение n байтов
 void *memset(void *str, int c, size_t n) {
     if (str == NULL) return NULL;
     
@@ -48,6 +53,7 @@ void *memset(void *str, int c, size_t n) {
     return str;
 }
 
+// Сложность: O(m + n), где m - длина dest, n - количество добавляемых символов
 char *strncat(char *dest, const char *src, size_t n) {
     if (dest == NULL || src == NULL) return dest;
     
@@ -61,18 +67,20 @@ char *strncat(char *dest, const char *src, size_t n) {
     return dest;
 }
 
+// Сложность: O(m), где m - длина строки str
 char *strchr(const char *str, int c) {
     if (str == NULL) return NULL;
     
     while (*str != '\0') {
-        if (*str == (char)c) {
+        if (*str == (unsigned char)c) {
             return (char *)str;
         }
         str++;
     }
-    return ((char)c == '\0') ? (char *)str : NULL;
+    return ((unsigned char)c == '\0') ? (char *)str : NULL;
 }
 
+// Сложность: O(n) - сравнение до n символов
 int strncmp(const char *str1, const char *str2, size_t n) {
     if (str1 == NULL || str2 == NULL) return 0;
     
@@ -85,6 +93,7 @@ int strncmp(const char *str1, const char *str2, size_t n) {
     return 0;
 }
 
+// Сложность: O(n) - копирование до n символов
 char *strncpy(char *dest, const char *src, size_t n) {
     if (dest == NULL || src == NULL) return dest;
     
@@ -98,6 +107,7 @@ char *strncpy(char *dest, const char *src, size_t n) {
     return dest;
 }
 
+// Сложность: O(m * k), где m - длина str1, k - длина str2
 size_t strcspn(const char *str1, const char *str2) {
     if (str1 == NULL || str2 == NULL) return 0;
     
@@ -115,123 +125,19 @@ size_t strcspn(const char *str1, const char *str2) {
     return count;
 }
 
+// Сложность: O(1) - доступ к элементу массива по индексу
 char *strerror(int errnum) {
     static const char *errors[] = {
-        "No error",                                     // 0
-        "Operation not permitted",                      // 1
-        "No such file or directory",                    // 2
-        "No such process",                              // 3
-        "Interrupted system call",                      // 4
-        "Input/output error",                           // 5
-        "Device not configured",                        // 6
-        "Argument list too long",                       // 7
-        "Exec format error",                            // 8
-        "Bad file descriptor",                          // 9
-        "No child processes",                           // 10
-        "Resource deadlock avoided",                    // 11
-        "Cannot allocate memory",                       // 12
-        "Permission denied",                            // 13
-        "Bad address",                                  // 14
-        "Block device required",                        // 15
-        "Resource busy",                                // 16
-        "File exists",                                  // 17
-        "Cross-device link",                            // 18
-        "Operation not supported by device",            // 19
-        "Not a directory",                              // 20
-        "Is a directory",                               // 21
-        "Invalid argument",                             // 22
-        "Too many open files in system",                // 23
-        "Too many open files",                          // 24
-        "Inappropriate ioctl for device",               // 25
-        "Text file busy",                               // 26
-        "File too large",                               // 27
-        "No space left on device",                      // 28
-        "Illegal seek",                                 // 29
-        "Read-only file system",                        // 30
-        "Too many links",                               // 31
-        "Broken pipe",                                  // 32
-        "Numerical argument out of domain",             // 33
-        "Result too large",                             // 34
-        "Resource temporarily unavailable",             // 35
-        "Operation now in progress",                    // 36
-        "Operation already in progress",                // 37
-        "Socket operation on non-socket",               // 38
-        "Destination address required",                 // 39
-        "Message too long",                             // 40
-        "Protocol wrong type for socket",               // 41
-        "Protocol not available",                       // 42
-        "Protocol not supported",                       // 43
-        "Socket type not supported",                    // 44
-        "Operation not supported",                      // 45
-        "Protocol family not supported",                // 46
-        "Address family not supported by protocol family", // 47
-        "Address already in use",                       // 48
-        "Can't assign requested address",               // 49
-        "Network is down",                              // 50
-        "Network is unreachable",                       // 51
-        "Network dropped connection on reset",          // 52
-        "Software caused connection abort",             // 53
-        "Connection reset by peer",                     // 54
-        "No buffer space available",                    // 55
-        "Socket is already connected",                  // 56
-        "Socket is not connected",                      // 57
-        "Can't send after socket shutdown",             // 58
-        "Too many references: can't splice",            // 59
-        "Operation timed out",                          // 60
-        "Connection refused",                           // 61
-        "Too many levels of symbolic links",            // 62
-        "File name too long",                           // 63
-        "Host is down",                                 // 64
-        "No route to host",                             // 65
-        "Directory not empty",                          // 66
-        "Too many processes",                           // 67
-        "Too many users",                               // 68
-        "Disc quota exceeded",                          // 69
-        "Stale NFS file handle",                        // 70
-        "Too many levels of remote in path",            // 71
-        "RPC struct is bad",                            // 72
-        "RPC version wrong",                            // 73
-        "RPC prog. not avail",                          // 74
-        "Program version wrong",                        // 75
-        "Bad procedure for program",                    // 76
-        "No locks available",                           // 77
-        "Function not implemented",                     // 78
-        "Inappropriate file type or format",            // 79
-        "Authentication error",                         // 80
-        "Need authenticator",                           // 81
-        "Device power is off",                          // 82
-        "Device error",                                 // 83
-        "Value too large to be stored in data type",    // 84
-        "Bad executable (or shared library)",           // 85
-        "Bad CPU type in executable",                   // 86
-        "Shared library version mismatch",              // 87
-        "Malformed Mach-o file",                        // 88
-        "Operation canceled",                           // 89
-        "Identifier removed",                           // 90
-        "No message of desired type",                   // 91
-        "Illegal byte sequence",                        // 92
-        "Attribute not found",                          // 93
-        "Bad message",                                  // 94
-        "EMULTIHOP (Reserved)",                         // 95
-        "No message available",                         // 96
-        "ENOLINK (Reserved)",                           // 97
-        "No STREAM resources",                          // 98
-        "Not a STREAM",                                 // 99
-        "Protocol error",                               // 100
-        "STREAM ioctl timeout",                         // 101
-        "Operation not supported on socket",            // 102
-        "Policy not found",                             // 103
-        "State not recoverable",                        // 104
-        "Previous owner died",                          // 105
-        "Interface output queue is full"                // 106
+        ERROR_MESSAGES
     };
     
-    if (errnum >= 0 && errnum <= 106) {
+    if (errnum >= 0 && errnum <= MAX_ERROR_NUM) {
         return (char *)errors[errnum];
     }
     return "Unknown error";
 }
 
+// Сложность: O(m), где m - длина строки str
 size_t strlen(const char *str) {
     if (str == NULL) return 0;
     
@@ -242,6 +148,7 @@ size_t strlen(const char *str) {
     return len;
 }
 
+// Сложность: O(m * k), где m - длина str1, k - длина str2
 char *strpbrk(const char *str1, const char *str2) {
     if (str1 == NULL || str2 == NULL) return NULL;
     
@@ -258,19 +165,21 @@ char *strpbrk(const char *str1, const char *str2) {
     return NULL;
 }
 
+// Сложность: O(m), где m - длина строки str
 char *strrchr(const char *str, int c) {
     if (str == NULL) return NULL;
     
     const char *last = NULL;
     while (*str != '\0') {
-        if (*str == (char)c) {
+        if (*str == (unsigned char)c) {
             last = str;
         }
         str++;
     }
-    return ((char)c == '\0') ? (char *)str : (char *)last;
+    return ((unsigned char)c == '\0') ? (char *)str : (char *)last;
 }
 
+// Сложность: O(m * n), где m - длина haystack, n - длина needle (наивный алгоритм)
 char *strstr(const char *haystack, const char *needle) {
     if (haystack == NULL || needle == NULL) return NULL;
     if (*needle == '\0') return (char *)haystack;
@@ -287,49 +196,69 @@ char *strstr(const char *haystack, const char *needle) {
     return NULL;
 }
 
-static char *strtok_save = NULL;
-
+// Сложность: O(m * k), где m - длина обрабатываемой части строки, k - длина delim
 char *strtok(char *str, const char *delim) {
-    if (delim == NULL) return NULL;
+    static char *strtok_save = NULL;
     
-    if (str != NULL) {
-        strtok_save = str;
-    } else if (strtok_save == NULL) {
+    if (delim == NULL) {
         return NULL;
     }
     
+    // Если передан новый указатель, начинаем с него
+    if (str != NULL) {
+        strtok_save = str;
+    } 
+    // Если str == NULL, продолжаем с сохраненной позиции
+    else if (strtok_save == NULL) {
+        return NULL;
+    }
+    
+    // Пропускаем все разделители в начале
     char *start = strtok_save;
     while (*start != '\0') {
         const char *d = delim;
+        int is_delim = 0;
         while (*d != '\0') {
             if (*start == *d) {
-                start++;
+                is_delim = 1;
                 break;
             }
             d++;
         }
-        if (*d == '\0') break;
+        if (!is_delim) {
+            break; // Нашли начало токена
+        }
+        start++;
     }
     
+    // Если дошли до конца строки, токенов больше нет
     if (*start == '\0') {
         strtok_save = NULL;
         return NULL;
     }
     
+    // Ищем конец токена (первый разделитель)
     char *end = start;
     while (*end != '\0') {
         const char *d = delim;
+        int is_delim = 0;
         while (*d != '\0') {
             if (*end == *d) {
-                *end = '\0';
-                strtok_save = end + 1;
-                return start;
+                is_delim = 1;
+                break;
             }
             d++;
+        }
+        if (is_delim) {
+            // Нашли разделитель - заменяем на '\0' и сохраняем позицию
+            *end = '\0';
+            strtok_save = end + 1;
+            return start;
         }
         end++;
     }
     
+    // Дошли до конца строки - это последний токен
     strtok_save = NULL;
     return start;
 }

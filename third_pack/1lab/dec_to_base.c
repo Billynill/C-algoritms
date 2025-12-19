@@ -17,7 +17,7 @@ status_code dec_to_base_r(uint32_t number, uint32_t r, char* buffer, uint32_t bu
     uint32_t digits_needed = 1;
     
     while (temp >= base) {
-        temp >>= r;  // Эквивалентно делению на base
+        temp >>= r;  
         digits_needed++;
     }
     
@@ -39,7 +39,7 @@ status_code dec_to_base_r(uint32_t number, uint32_t r, char* buffer, uint32_t bu
 }
 
 void print_conversion(uint32_t number, uint32_t r) {
-    char buffer[33]; // Максимальная длина для 32-битного числа
+    char buffer[33]; 
     
     status_code result = dec_to_base_r(number, r, buffer, sizeof(buffer));
     

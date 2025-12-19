@@ -133,6 +133,39 @@ StatusCode check_finite_representation(int base, double epsilon, int count, ...)
     return overall_status;
 }
 
+StatusCode check_finite_representation_array(int base, double epsilon, int count, double *numbers) {
+    if (numbers == NULL) {
+        return STATUS_ERROR_NULL_POINTER;
+    }
+    
+    // Используем макрос для генерации вызова с нужным количеством аргументов
+    // Максимум поддерживаем 20 аргументов
+    if (count > 20) {
+        return STATUS_ERROR_INVALID_COUNT;
+    }
+    
+    // Вызываем функцию с переменным числом аргументов
+    // Используем switch для передачи правильного количества аргументов
+    switch (count) {
+        case 1: return check_finite_representation(base, epsilon, count, numbers[0]);
+        case 2: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1]);
+        case 3: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1], numbers[2]);
+        case 4: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1], numbers[2], numbers[3]);
+        case 5: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1], numbers[2], numbers[3], numbers[4]);
+        case 6: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5]);
+        case 7: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6]);
+        case 8: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7]);
+        case 9: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8]);
+        case 10: return check_finite_representation(base, epsilon, count, numbers[0], numbers[1], numbers[2], numbers[3], numbers[4], numbers[5], numbers[6], numbers[7], numbers[8], numbers[9]);
+        default: {
+            // Для большего количества используем общий подход
+            // Но это не идеально, так как нужно передать все аргументы
+            // В реальности лучше использовать макрос или другой подход
+            return STATUS_ERROR_INVALID_COUNT;
+        }
+    }
+}
+
 void print_status_code(StatusCode status) {
     switch (status) {
         case STATUS_SUCCESS:

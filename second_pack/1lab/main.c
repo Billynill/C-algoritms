@@ -50,11 +50,11 @@ int main(void) {
         }
     }
     
-    StatusCode status = check_finite_representation(base, epsilon, count, 
-                                                   numbers[0], numbers[1], numbers[2]);
+    StatusCode status = check_finite_representation_array(base, epsilon, count, numbers);
     
     if (status != STATUS_SUCCESS) {
         printf("Ошибка при выполнении: ");
+        print_status_code(status);
     }
     
     free(numbers);

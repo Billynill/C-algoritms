@@ -1,0 +1,6 @@
+Hello World !
+This is a test .
+Special chars: @#$%^&*()
+Numbers: 
+ABC abc  xyz
+
